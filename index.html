@@ -18,44 +18,49 @@
   </style>
 </head>
 <body>
-
   <div class="header">
     <img src="./images/logo.svg" alt="Page Logo">
   </div>
 
   <div class="calculator">
-      <div class="bill">
-        <p class="calculator__title">Bill</p>
-        <div class="input_icon">
-          <input id="total_amount" placeholder="0">
-          <img src="./images/icon-dollar.svg" alt="dollar-sign">
+    <div class="left-box">
+        <div class="bill">
+          <p class="calculator__title">Bill</p>
+          <div class="input_icon">
+            <input id="total_amount" placeholder="0">
+            <img src="./images/icon-dollar.svg" alt="dollar-sign">
+          </div>
+          
+      </div>
+
+      <div class="tip_selection mg-top">
+        <p class="calculator__title">Select Tip %</p>
+        <div class="selector">
+          <div class="percentage_box">5%</div>
+          <div class="percentage_box">10%</div>
+          <div class="percentage_box">15%</div>
+          <div class="percentage_box">25%</div>
+          <div class="percentage_box">50%</div>
+          <input placeholder="Custom">
         </div>
         
-    </div>
-
-    <div class="tip_selection mg-top">
-      <p class="calculator__title">Select Tip %</p>
-      <div class="selector">
-        <div class="percentage_box">5%</div>
-        <div class="percentage_box">10%</div>
-        <div class="percentage_box">15%</div>
-        <div class="percentage_box">25%</div>
-        <div class="percentage_box">50%</div>
-        <input placeholder="Custom">
       </div>
-      
-    </div>
 
-    <div class="number_of_people mg-top">
-      <p class="calculator__title">Number of People</p>
-      <div class="input_icon">
-        <input placeholder="0">
-        <img src="images/icon-person.svg" alt="people-sign">
+      <div class="number_of_people mg-top">
+        <div class="flexcontainer">
+          <p class="calculator__title">Number of People</p>
+          <p class="warning"></p>
+        </div>
+        <div class="input_icon">
+          <input class="people" placeholder="0">
+          <img src="images/icon-person.svg" alt="people-sign">
+        </div>
+        
       </div>
-      
     </div>
+      
 
-    <div class="tip_card mg-top">
+    <div class="tip_card">
       <p>Tip Amount <br><span>/ person</span></p>
       <div class="price">$ 0.00</div>
       <p>Total <br><span>/ person</span></p>
@@ -64,11 +69,12 @@
     </div>
     
   </div>
+  
  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by Benny.
+    Coded by <a href="https://www.frontendmentor.io/profile/bennyteh" target="_blank">Benny</a>.
   </div>
 </body>
 </html>
