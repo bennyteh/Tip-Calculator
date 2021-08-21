@@ -51,6 +51,16 @@ input{
     font-family: 'Space Mono', monospace;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 .input_icon{
     position: relative;
 }
@@ -73,17 +83,30 @@ input:focus{
     column-gap: 16px;
 }
 
-.selector .percentage_box{
-    color: hsl(189, 41%, 96%);
-    background-color: hsl(183, 100%, 15%);
+
+.selector .percentage_button{
+    outline: none;
+    border: none;
     width: 97%;
     height: 45px;
     padding: 8px;
     text-align: center;
     border-radius: 8px;
+    font-family: 'space mono', monospace;
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+}
+
+.button_normal {
+    color: hsl(189, 41%, 96%);
+    background-color: hsl(183, 100%, 15%);
+}
+
+.button_focus{
+    transition-duration: 0.3s;
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
 }
 
 .selector input{
@@ -130,7 +153,7 @@ input:focus{
 .price {
     color: hsl(172, 67%, 45%);
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     margin: 25px 0px;
     text-align: right;
 }
@@ -145,6 +168,17 @@ input:focus{
     border-radius: 5px;
     height: 40px;
     opacity: 0.4;
+}
+
+.button-active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 350px) {
+    .price {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 650px) {
@@ -184,6 +218,10 @@ input:focus{
         width: 49%;
         height: 100%;
         grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr
+    }
+
+    .price {
+        font-size: 30px;
     }
 
     .button{
