@@ -47,7 +47,7 @@ tipPercent.forEach(button => {
         })
    
         event.target.classList.add("button_focus")
-
+        customTip.value = ""
         currentTipValue = event.target.value
         amountPerPerson(currentBillAmount, currentTipValue, numberOfPeople)
     })
